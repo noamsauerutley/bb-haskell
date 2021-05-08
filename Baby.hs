@@ -1,7 +1,8 @@
 module Baby
 ( doubleMe
-, doubleUs
 , doubleSmallNumber
+, doubleUs
+, boomBang
 ) where
 
 doubleMe :: Float -> Float
@@ -14,3 +15,6 @@ doubleSmallNumber :: Float -> Float
 doubleSmallNumber x  = if x > 100
     then x
     else x*2
+
+boomBang :: [Int] -> [[Char]]
+boomBang xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
