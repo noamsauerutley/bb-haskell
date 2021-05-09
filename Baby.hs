@@ -5,6 +5,7 @@ module Baby
 , doubleUs
 , length
 , removeNonUppercase
+, rightTriangles
 , triangles
 ) where
 
@@ -30,3 +31,6 @@ removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 
 triangles :: [(Int, Int, Int)]
 triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ]
+
+rightTriangles :: [(Int, Int, Int)]
+rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2 ]
