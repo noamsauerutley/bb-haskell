@@ -5,6 +5,7 @@ module Baby
 , doubleUs
 , length
 , removeNonUppercase
+, triangles
 ) where
 
 boomBang :: [Int] -> [[Char]]
@@ -26,3 +27,6 @@ length' xs = sum [1 | _ <- xs]
 
 removeNonUppercase :: [Char] -> [Char]
 removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+
+triangles :: [(Int, Int, Int)]
+triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ]
