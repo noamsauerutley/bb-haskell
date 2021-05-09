@@ -4,6 +4,7 @@ module Baby
 , doubleSmallNumber
 , doubleUs
 , length
+, removeNonUppercase
 ) where
 
 boomBang :: [Int] -> [[Char]]
@@ -23,3 +24,5 @@ doubleUs x y = doubleMe x + doubleMe y
 length' :: [t] -> Int
 length' xs = sum [1 | _ <- xs]
 
+removeNonUppercase :: [Char] -> [Char]
+removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
